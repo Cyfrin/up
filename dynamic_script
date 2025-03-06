@@ -36,7 +36,7 @@ install_package() {
       ;;
     "safe-hash")
       say "Installing latest Safe-Hash"
-      ensure curl --proto '=https' --tlsv1.2 -LsSf https://github.com/cyfrin/safe-hash/releases/latest/download/safe-hash-installer.sh | bash
+      ensure curl --proto '=https' --tlsv1.2 -LsSf https://github.com/cyfrin/safe-hash-rs/releases/latest/download/safe-hash-installer.sh | bash
       rm -f ~/.cyfrin/bin/safe-hash
       say "Safe-Hash installation complete!"
       ;;
