@@ -1,9 +1,6 @@
 # 🚀 Cyfrinup  
 
-**The all-in-one security toolkit** for downloading Command Line tools from Cyfrin.  
-
-> [!CAUTION]
-> It is under development and is not fully tested. Please do not use it yet. It may lead to unrecoverable changes.
+**The all-in-one security toolkit** for downloading Command Line tools from Cyfrin.
 
 ### ✅ Supported Platforms  
 - Linux  
