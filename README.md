@@ -24,3 +24,11 @@ curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | b
 | [Aderyn](https://github.com/Cyfrin/aderyn) | Rust based Solidity AST security scanner | Linux, macOS, WSL |
 | [Safe-Hash](https://github.com/Cyfrin/safe-hash-rs) | Safe Wallet Tx Verificaton tool | Linux, macOS, WSL, Windows (Intel) |
 
+
+## 🚀 Usage  
+
+After installation, run the following command to download all available tools:  
+```bash
+cyfrinup
+```  
+This will fetch and install all supported tools for your platform. 🚀
