@@ -2,6 +2,9 @@
 
 **The all-in-one security toolkit** for downloading Command Line tools from Cyfrin.  
 
+> [!CAUTION]
+> It is under development and is not fully tested. Please do not use it yet.
+
 ### ✅ Supported Platforms  
 - Linux  
 - macOS  
