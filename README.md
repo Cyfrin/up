@@ -14,7 +14,7 @@
 Run the following command to install Cyfrinup:  
 
 ```bash
-curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | bash
+curl -L https://raw.githubusercontent.com/Cyfrin/up/main/install | bash
 ```
 
 ## 📦 Tools Included  
