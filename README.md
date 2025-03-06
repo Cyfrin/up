@@ -1,6 +1,6 @@
 # 🚀 Cyfrinup  
 
-**The all-in-one security toolkit** for downloading [Aderyn](https://github.com/Cyfrin/aderyn), [Safe-Hash](https://github.com/Cyfrin/safe-hash-rs), and other CLI tools from Cyfrin.  
+**The all-in-one security toolkit** for downloading security related tools from Cyfrin.  
 
 ### ✅ Supported Platforms  
 - Linux  
