@@ -20,6 +20,8 @@ Run the following command to install Cyfrinup:
 curl -L https://raw.githubusercontent.com/Cyfrin/up/main/install | bash
 ```
 
+> NOTE: If you have previously installed Cyfrinup from [Aderyn](https://github.com/Cyfrin/aderyn)'s repository, you do not have to install it again.
+
 ## 📦 Tools Included  
 
 | Tool      | Description | Supported Platforms |
