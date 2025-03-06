@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+set -e
+
+main() {
+  need_cmd curl
+
+  # Check if CYFRINUP_ONLY_INSTALL is set and its value
+  if [ -n "$CYFRINUP_ONLY_INSTALL" ]; then
+    case "$CYFRINUP_ONLY_INSTALL" in
+      "aderyn")
+        install_package "aderyn"
+        ;;
+      "safe-hash")
+        install_package "safe-hash"
+        ;;
+      *)
+        err "Invalid value for CYFRINUP_ONLY_INSTALL. It must be either 'aderyn' or 'safe-hash'."
+        ;;
+    esac
+  else
+    # Default behavior: Install both Aderyn and Safe-Hash
+    install_package "aderyn"
+    install_package "safe-hash"
+  fi
+}
+
+install_package() {
+  local package="$1"
+
+  case "$package" in
+    "aderyn")
+      say "Installing latest Aderyn"
+      ensure curl --proto '=https' --tlsv1.2 -LsSf https://github.com/cyfrin/aderyn/releases/latest/download/aderyn-installer.sh | bash
+      rm -f ~/.cyfrin/bin/aderyn
+      say "Aderyn installation complete!"
+      ;;
+    "safe-hash")
+      say "Installing latest Safe-Hash"
+      ensure curl --proto '=https' --tlsv1.2 -LsSf https://github.com/cyfrin/safe-hash/releases/latest/download/safe-hash-installer.sh | bash
+      rm -f ~/.cyfrin/bin/safe-hash
+      say "Safe-Hash installation complete!"
+      ;;
+    *)
+      err "Unknown package: $package"
+      ;;
+  esac
+}
+
+say() {
+  printf 'cyfrinup: %s\n' "$1"
+}
+
+warn() {
+  say "Warning: ${1}" >&2
+}
+
+err() {
+  say "$1" >&2
+  exit 1
+}
+
+need_cmd() {
+  if ! check_cmd "$1"; then
+    err "Need '$1' (command not found)"
+  fi
+}
+
+check_cmd() {
+  command -v "$1" > /dev/null 2>&1
+}
+
+# Run a command that should never fail. If the command fails execution
+# will immediately terminate with an error showing the failing
+# command.
+ensure() {
+  if ! "$@"; then err "Command failed: $*"; fi
+}
+
+main "$@" || exit 1
