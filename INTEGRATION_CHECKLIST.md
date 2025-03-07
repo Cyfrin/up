@@ -17,6 +17,8 @@ Only script where changes are allowed (and will make sense) is in the `dynamic_s
 
 * [ ] In the `install_package()` function, describe the steps you'd take to install the new tool.
 
+* [ ] Update the Readme toolbox
+
 No other kind of change is allowed.
 
 ## Misc. Info
